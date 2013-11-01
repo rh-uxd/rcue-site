@@ -24,7 +24,6 @@
     <!-- html5.js -->
     <!--[if lt IE 9]>
       <script src="<?php echo get_template_directory_uri();?>/library/components/html5shiv/dist/html5shiv.js"></script>
-      <script src="<?php echo get_template_directory_uri();?>/library/components/respond/respond.min.js"></script>      
     <![endif]-->
 
     <!-- wordpress head functions -->
@@ -36,6 +35,11 @@
 
     <!-- typeahead plugin - if top nav search bar enabled -->
     <?php require_once('library/typeahead.php'); ?>
+
+    <!-- media-queries.js (fallback) -->
+    <!--[if lt IE 9]>
+      <script src="<?php echo get_template_directory_uri();?>/library/components/respond/respond.min.js"></script>      
+    <![endif]-->
   </head>
   
   <body <?php body_class(); ?>>

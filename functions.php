@@ -592,7 +592,7 @@ if( !function_exists( "theme_js" ) ) {
   function theme_js(){
   
     wp_register_script( 'bootstrap', 
-      get_template_directory_uri() . '/library/rcue/bootstrap/dist/js/bootstrap.min.js', 
+      get_template_directory_uri() . '/library/components/bootstrap/dist/js/bootstrap.min.js', 
       array('jquery'), 
       '1.2' );
   

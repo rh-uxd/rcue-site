@@ -1,3 +1,0 @@
-[submodule "library/rcue"]
-	path = library/rcue
-	url = git@github.com:rhamilto/rcue.git

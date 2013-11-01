@@ -23,7 +23,7 @@
           href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-57-precomposed.png">
     <!-- html5.js -->
     <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/rcue/js/html5shiv.js"></script>
+      <script src="<?php echo get_template_directory_uri();?>/library/components/rcue/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- wordpress head functions -->
@@ -38,7 +38,7 @@
 
     <!-- media-queries.js (fallback) -->
     <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/rcue/js/respond.min.js"></script>      
+      <script src="<?php echo get_template_directory_uri();?>/library/components/rcue/js/respond.min.js"></script>      
     <![endif]-->
   </head>
   

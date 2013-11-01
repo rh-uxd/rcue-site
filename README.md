@@ -39,3 +39,19 @@ Sidebars
 ________
 
 We’ve built in two different sidebars. One for the homepage and one for the other pages. Add widgets to them.
+
+
+Development
+___________
+
+Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
+
+After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
+
+    npm install -g bower
+
+Now that bower is available, we can install the required development components:
+
+    bower install
+
+At this point, you should now have a library/components/ folder with all dependencies listed in the bower.json file installed.

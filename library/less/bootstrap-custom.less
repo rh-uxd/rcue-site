@@ -171,6 +171,7 @@ header {
           filter: none;
         }
         .dropdown-menu {
+          display: none !important;
           padding-bottom: 0 !important;
           padding-top: 0 !important;
         }
@@ -234,6 +235,7 @@ header {
             }
             li {
               a {
+                border: 0;
                 padding-bottom: 3px;
                 padding-top: 3px;
               }
@@ -449,14 +451,12 @@ pre.prettyprint {
         .active, .current_page_item {
           position: relative;
           &:after {
-            border: 5px solid transparent;
-            border-left-width: 0;
-            border-right-color: #333;
-            content: '';
+            content: @fa-var-angle-left;
+            font-family: @icon-font-name-rcue;
             height: 0;
             position: absolute;
             left: 2px;
-            top: 10px;
+            top: 6px;
             width: 0;
           }
           > a {

@@ -787,12 +787,12 @@ function bootstrapwp_breadcrumbs()
 {
     $home      = 'Home'; // text for the 'Home' link
     $before    = '<li class="active">'; // tag before the current crumb
-    $sep       = '<span class="divider">/</span>';
+    $sep       = '';
     $after     = '</li>'; // tag after the current crumb
 
     if (!is_home() && !is_front_page() || is_paged()) {
 
-        echo '<ul class="breadcrumb">';
+        echo '<ol class="breadcrumb">';
 
         global $post;
         $homeLink = home_url();
@@ -887,7 +887,7 @@ function bootstrapwp_breadcrumbs()
             //     }
             // }
 
-        echo '</ul>';
+        echo '</ol>';
 
     }
 }

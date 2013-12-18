@@ -9209,7 +9209,7 @@ pre.prettyprint {
 .sidebar .menu > li > .sub-menu .active:after,
 .sidebar .menu > li > .sub-menu .current_page_item:after {
   content: "\f104";
-  font-family: "RCUEIcons-webfont";
+  font-family: "FontAwesome";
   height: 0;
   position: absolute;
   left: 2px;

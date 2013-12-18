@@ -578,7 +578,7 @@ function add_active_class($classes, $item) {
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-        wp_register_style( 'bootstrap-custom', get_template_directory_uri() . '/library/css/bootstrap-custom.css', array(), '1.0', 'all' );
+        wp_register_style( 'bootstrap-custom', get_template_directory_uri() . '/library/css/bootstrap-custom.min.css', array(), '1.0', 'all' );
         wp_register_style( 'wp-bootstrap', get_stylesheet_uri(), array(), '1.0', 'all' );
         
         wp_enqueue_style( 'bootstrap-custom' );

@@ -4,3 +4,6 @@ admin/themes/
 Thumbs.db
 
 library/components
+
+# Ignore local nodejs packages
+node_modules/

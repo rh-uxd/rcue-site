@@ -106,7 +106,7 @@ h1, h2, h3 {
   margin: 0 0 20px;
   padding: 0;
   width: 100%;
-  .fa, .glyphicon, .rcueicon {
+  .fa, .glyphicon, .pficon {
     font-size: 24px;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -418,6 +418,13 @@ hr {
   padding: 0;
 }
 
+.pf-example {
+  font-size: @font-size-base;
+  h3 {
+    line-height: 1.1;
+  }
+}
+
 pre.prettyprint {
   background: none !important;
   border: 0 !important;
@@ -428,17 +435,31 @@ pre.prettyprint {
   margin-top: 20px;
 }
 
-.row .section {
-  border-top: 1px solid #dfdfdf;
-  margin-top: 30px;
-  padding-top: 30px;
+.section, .super-section {
+  padding-top: 100px;
   position: relative;
+  &:before {
+    background: #f0f0f0;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
   > *:first-child {
     margin-top: 0;
   }
-  h2 + p {
-    margin-top: -12px;
+  h3 + p {
+    margin-bottom: 20px;
+    margin-top: -8px;
   }
+  .pagination, .pager {
+    margin: 0;
+  }
+}
+
+.super-section:before {
+  background: #dfdfdf;
 }
 
 .sidebar {

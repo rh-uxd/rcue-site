@@ -54,35 +54,31 @@
             </button>
             <a class="navbar-brand" id="logo" title="<?php echo get_bloginfo('description'); ?>
               " href="
-              <?php echo home_url(); ?>        
+              <?php echo home_url(); ?>
               ">
-              <?php if(of_get_option('navbar-branding_logo','')!='') { ?>        
-              <img src="<?php echo of_get_option('navbar-branding_logo'); ?>        
+              <?php if(of_get_option('navbar-branding_logo','')!='') { ?>
+              <img src="<?php echo of_get_option('navbar-branding_logo'); ?>
               " alt="
-              <?php echo get_bloginfo('description'); ?>        
+              <?php echo get_bloginfo('description'); ?>
               ">
               <?php }
                   if(of_get_option('site_name','1')) bloginfo('name'); ?></a>
-          </div>
+          </div><!-- end .navbar-header -->
           <div class="navbar-collapse collapse">
-            <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>        
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 pull-right">
-              <?php if(of_get_option('search_bar', '1')) {?>        
-              <form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>
-                ">
-                <div class="input-group">
-                  <input name="s" id="s" type="text" class="form-control" autocomplete="off" placeholder="<?php _e('Search','bonestheme'); ?>        
-                  " data-provide="typeahead" data-items="4" data-source='
-                  <?php echo $typeahead_data; ?>        
-                  '>
-                  <span class="input-group-btn">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </span>
-                </div>
-              </form>
-              <?php } ?></div>
-            </div>
-          </div>
+            <?php if(of_get_option('search_bar', '1')) {?>
+            <form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+              <div class="form-group">
+                <input name="s" id="s" type="text" class="form-control" autocomplete="off" placeholder="<?php _e('Search','bonestheme'); ?>
+                " data-provide="typeahead" data-items="4" data-source='
+                <?php echo $typeahead_data; ?>
+                '>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div><!-- end .form-group -->
+            </form>
+            <?php } ?>
+            <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+          </div><!-- end .navbar-collapse -->
+        </div><!-- end .container -->
       </nav> <!-- end .navbar -->
     </header> <!-- end header -->
-    <div class="container">
+    <div class="container" id="overview">

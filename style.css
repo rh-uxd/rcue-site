@@ -13,8 +13,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 /* Admin Top Navigation fixes */
 
-body.admin-bar .navbar-fixed-top{ 
-  top: 32px; 
+body.admin-bar .navbar-fixed-top {
+  top: 46px;
+}
+
+@media (min-width: 783px) {
+  body.admin-bar .navbar-fixed-top {
+    top: 32px;
+  }
 }
 
 /* see less/bootstrap-custom.less */

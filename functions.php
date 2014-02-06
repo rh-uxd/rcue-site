@@ -108,47 +108,57 @@ function bones_register_sidebars() {
       'description' => 'Used on every page BUT the homepage page template.',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
 
     ));
     
     register_sidebar(array(
       'id' => 'sidebar2',
-      'name' => 'Homepage Sidebar',
+      'name' => 'Homepage Left Sidebar',
       'description' => 'Used only on the homepage page template.',
       'before_widget' => '<div id="%1$s" class="widget  %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+      'id' => 'sidebar3',
+      'name' => 'Homepage Right Sidebar',
+      'description' => 'Used only on the homepage page template.',
+      'before_widget' => '<div id="%1$s" class="widget  %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
     
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm-6 col-md-6 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
 
     register_sidebar(array(
       'id' => 'footer2',
       'name' => 'Footer 2',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm-6 col-md-6 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
 
-    register_sidebar(array(
+    /* register_sidebar(array(
       'id' => 'footer3',
       'name' => 'Footer 3',
       'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
+    )); */
     
     
     /* 
@@ -174,26 +184,22 @@ function bones_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
   <li <?php comment_class(); ?>>
     <article id="comment-<?php comment_ID(); ?>" class="clearfix">
-      <div class="comment-author vcard row-fluid clearfix">
-        <div class="avatar span3">
-          <?php echo get_avatar( $comment, $size='75' ); ?>
+      <div class="comment-author vcard clearfix">
+        <div class="avatar">
+          <?php echo get_avatar( $comment, $size='24' ); ?>
+          <?php printf('<span class="name">%s</span>', get_comment_author_link()) ?>
+          &ndash; <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('Y/m/d g:i:s A T'); ?> </a></time>
         </div>
-        <div class="span9 comment-text">
-          <?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
-          <?php edit_comment_link(__('Edit','bonestheme'),'<span class="edit-comment btn btn-small btn-info"><i class="icon-white icon-pencil"></i>','</span>') ?>
-                    
-                    <?php if ($comment->comment_approved == '0') : ?>
-                 <div class="alert-message success">
-                  <p><?php _e('Your comment is awaiting moderation.','bonestheme') ?></p>
-                  </div>
+        <div class="comment-text">
+          <?php if ($comment->comment_approved == '0') : ?>
+            <div class="alert-message success">
+              <p><?php _e('Your comment is awaiting moderation.','bonestheme') ?></p>
+            </div>
           <?php endif; ?>
-                    
-                    <?php comment_text() ?>
-                    
-                    <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
-                    
+          <?php comment_text() ?>
+          <?php edit_comment_link(__('Edit','bonestheme')) ?>
           <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                </div>
+        </div>
       </div>
     </article>
     <!-- </li> is added by wordpress automatically -->
@@ -601,14 +607,14 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '1.2' );
 
-    wp_register_script(  'rcue', 
+    wp_register_script(  'pf', 
       get_template_directory_uri() . '/library/js/rcue.js', 
       array('jquery'), 
       '1.2' );
 
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
-    wp_enqueue_script('rcue');
+    wp_enqueue_script('pf');
     
   }
 }
@@ -892,5 +898,10 @@ function bootstrapwp_breadcrumbs()
     }
 }
 
+// Add stylesheet to login
+function my_login_stylesheet() { ?>
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/library/css/bootstrap-custom.min.css'; ?>" type="text/css" media="all" />
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 ?>

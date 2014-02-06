@@ -8,9 +8,9 @@
 
 get_header(); ?>
 			
-			<div id="content" class="clearfix row-fluid">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class=" col-sm-9 col-md-9 col-lg-9 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -77,7 +77,7 @@ get_header(); ?>
 			
 				</div> <!-- end #main -->
 				
-				<div id="sidebar1" class="span4 fluid-sidebar sidebar" role="complementary">
+				<div id="sidebar1" class="col-sm-3 col-md-3 col-lg-3 fluid-sidebar sidebar" role="complementary">
 				
 					<?php if ( !empty($post->post_excerpt) ) { ?> 
 					<p class="alert alert-block success"><?php echo get_the_excerpt(); ?></p>

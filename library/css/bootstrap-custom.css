@@ -9630,21 +9630,21 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   font-weight: 100;
   margin: 0 0 20px;
 }
-.home .banner + .row > .col-md-4,
-.home .banner + .row > .col-md-8 {
+.home .banner + .row > .col-md-5,
+.home .banner + .row > .col-md-7 {
   padding-top: 35px;
 }
-.home .banner + .row > .col-md-4 h2,
-.home .banner + .row > .col-md-8 h2 {
+.home .banner + .row > .col-md-5 h2,
+.home .banner + .row > .col-md-7 h2 {
   font-size: 18px;
   line-height: 1;
   margin: 0 0 20px;
   text-transform: none;
 }
-.home .banner + .row > .col-md-4 {
+.home .banner + .row > .col-md-5 {
   padding-bottom: 35px;
 }
-.home .banner + .row > .col-md-8 em {
+.home .banner + .row > .col-md-7 em {
   font-size: 18px;
   font-style: normal;
 }
@@ -10379,16 +10379,16 @@ th {
   }
 }
 @media (min-width: 768px) {
-  .home .banner + .row > .col-md-4,
-  .home .banner + .row > .col-md-8 {
+  .home .banner + .row > .col-md-5,
+  .home .banner + .row > .col-md-7 {
     padding-bottom: 30px;
     padding-top: 50px;
   }
-  .home .banner + .row > .col-md-4 {
+  .home .banner + .row > .col-md-5 {
     padding-left: 35px;
     padding-right: 20px;
   }
-  .home .banner + .row > .col-md-8 {
+  .home .banner + .row > .col-md-7 {
     border-right: 1px solid #d5d5d5;
     padding-right: 35px;
   }

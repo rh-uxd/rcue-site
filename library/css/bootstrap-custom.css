@@ -10188,7 +10188,7 @@ th {
     padding: 7px 15px;
   }
   .home .banner {
-    padding: 43px 400px 0 0;
+    padding: 66px 400px 0 0;
   }
   .home .banner .description {
     font-size: 15px;
@@ -10207,7 +10207,7 @@ th {
 }
 @media (min-width: 1200px) {
   .home .banner {
-    padding: 80px 600px 0 0;
+    padding: 106px 600px 0 0;
   }
   .home .banner .description {
     max-width: 540px;

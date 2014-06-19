@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "rcue": "git@github.com:patternfly/rcue.git#v0.8.0"
+    "rcue": "git@github.com:patternfly/rcue.git"
   }
 }

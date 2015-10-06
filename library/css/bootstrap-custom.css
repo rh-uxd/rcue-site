@@ -10362,7 +10362,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .banner {
   color: #dbdada;
-  padding: 80px 500px 0 0;
+  padding: 106px 500px 0 0;
   position: relative;
 }
 .home .banner .description {
@@ -11196,6 +11196,7 @@ th {
 @media (min-width: 768px) {
   .home .banner + .row > .col-md-5,
   .home .banner + .row > .col-md-7 {
+    min-height: 225px;
     padding-bottom: 30px;
     padding-top: 50px;
   }
